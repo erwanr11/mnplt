@@ -1,0 +1,26 @@
+{
+  "logo": "Ficelles",
+  "signature": "Le jeu des manœuvres du quotidien",
+
+  "diorama": {
+    "decor": "boulangerie-accueil",
+    "description": "Sous le faisceau d'un projecteur, la scène en plein jour : devant la boulangerie, Irène tend un stylo à Madame O.",
+    "objets": [
+      {
+        "id": "stand", "type": "boite", "x": 157, "y": 63, "longueur": 37.7, "profondeur": 31.4, "hauteur": 31.4,
+        "couleur": "#F26B5B", "couleurDessus": "#F7A296", "couleurOmbre": "#D9564A",
+        "dessus": [ { "x": 2.8, "y": 9.7, "longueur": 18.2, "profondeur": 9.4 } ]
+      }
+    ],
+    "personnages": [
+      { "id": "madame-o", "x": 111.6, "y": 174.4, "sens": "droite", "options": { "sac": false } },
+      { "id": "irene", "x": 157.5, "y": 128.6, "sens": "gauche" }
+    ],
+    "bulle": { "personnage": "irene", "texte": "« Juste une signature, rien de plus ! »" }
+  },
+
+  "baseline": { "avant": "Chaque jour, quelqu’un essaie de vous faire dire ", "accent": "oui", "apres": "." },
+  "explication": "Apprenez à repérer ses manœuvres, et à y répondre avec le sourire.",
+  "bouton": "Lever de rideau",
+  "lien": "J’ai déjà un carnet"
+}

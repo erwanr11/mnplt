@@ -1,0 +1,75 @@
+/* Ficelles — palette, polices et règles de base.
+   Les couleurs viennent de CLAUDE.md et des maquettes validées. */
+
+:root {
+  --bleu-nuit: #24324A;
+  --vert-eau: #2F8F8B;
+  --corail: #F26B5B;
+  --moutarde: #F2B544;
+  --fond-jeu: #E6EFEE;
+  --fond-salle: #171F2E;
+  --texte-sombre-2: #D0D8E4;   /* texte secondaire sur fond sombre */
+  --texte-clair-2: #5D6B80;    /* texte secondaire sur fond clair */
+  --gris-signature: #D6DEE9;
+  --bordure-claire: #C5D6D5;
+  --rideau: #3A1E28;
+  --rideau-pli: #2A141C;
+  --blanc: #FFFFFF;
+
+  --police-ui: 'DM Sans', system-ui, sans-serif;
+  --police-titre: 'DM Serif Display', Georgia, serif;
+
+  --largeur-max: 430px;
+  --rayon-carte: 20px;
+  --rayon-bouton: 14px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  min-height: 100dvh;
+  font-family: var(--police-ui);
+  color: var(--bleu-nuit);
+  background: var(--fond-jeu);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  transition: background-color .35s ease;
+}
+body.fond-salle { background: var(--fond-salle); }
+body.fond-jeu { background: var(--fond-jeu); }
+
+/* La colonne de l'appli : pleine largeur sur téléphone, centrée au-delà de 430 px. */
+.app {
+  position: relative;
+  width: 100%;
+  max-width: var(--largeur-max);
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+.ecran {
+  min-height: 100dvh;
+  animation: fondu .35s ease both;
+}
+@keyframes fondu { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ecran { animation: none; }
+  body { transition: none; }
+}
+
+button { font-family: inherit; }
+
+.visuellement-cache {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.sans-js { color: var(--blanc); padding: 24px; font-size: 16px; }
+
+.erreur-chargement {
+  padding: 24px; font-size: 16px; line-height: 1.45; color: var(--blanc);
+}
