@@ -1,0 +1,47 @@
+{
+  "herite": "boulangerie",
+  "id": "boulangerie-accueil",
+  "nom": "La boulangerie, version simplifiée pour l'accueil",
+
+  "piece": { "hauteurMurs": 141.4 },
+  "socle": { "epaisseur": 18.9 },
+
+  "sol": { "dalles": null, "bordureMurDroit": null },
+
+  "murs": {
+    "gauche": {
+      "couleur": "#D9E4EA",
+      "plinthe": null,
+      "elements": [
+        { "id": "fenetre-1", "retirer": true },
+        { "id": "fenetre-2", "u": 125.7, "v": 31.4, "largeur": 44, "hauteur": 50.3, "epaisseurCadre": 3.1, "croisillons": false },
+        { "id": "affiche-parc", "u": 37.7, "v": 44, "largeur": 50.3, "hauteur": 50.3, "texte": null, "tronc": false }
+      ]
+    },
+    "droit": {
+      "plinthe": null,
+      "elements": [
+        { "id": "enseigne", "u": 18.9, "v": 12.6, "largeur": 182.3, "hauteur": 22, "texte": null, "arrondi": 0 },
+        { "id": "store", "u": 18.9, "v": 44, "largeur": 182.3, "hauteur": 18.9, "largeurRayure": 15.7, "pas": 31.4, "ourlet": null },
+        { "id": "porte", "u": 25.1, "v": 72.3, "largeur": 37.7, "hauteur": 69.1, "vitre": null, "poignee": null },
+        {
+          "id": "vitrine", "u": 88, "v": 72.3, "largeur": 113.1, "hauteur": 53.4,
+          "etagere": null, "viennoiseries": null,
+          "pains": [
+            { "u": 37.7, "v": 31.4, "rx": 12.6, "ry": 5, "couleur": "#D99A4E" },
+            { "u": 75.4, "v": 31.4, "rx": 12.6, "ry": 5, "couleur": "#D99A4E" }
+          ]
+        }
+      ]
+    }
+  },
+
+  "arete": null,
+
+  "objets": [
+    { "id": "plante", "x": 43.6, "y": 25.5, "touffes": 2, "soucoupe": false, "pot": "#2F6F6B" },
+    { "id": "lampadaire", "x": 15.7, "y": 204, "hauteur": 85, "lumiere": null }
+  ],
+
+  "cadrage": { "marges": { "haut": 15.7, "bas": 12.6, "cotes": 61 } }
+}

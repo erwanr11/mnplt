@@ -1,0 +1,33 @@
+/* Écran de scène, d'après maquettes/02-scene-petition.html */
+
+.scene {
+  height: 100dvh;
+  display: flex; flex-direction: column;
+  padding: 16px 16px max(16px, env(safe-area-inset-bottom));
+  background: var(--fond-jeu);
+  overflow: hidden;
+}
+
+.scene__entete { flex: none; display: flex; align-items: center; gap: 10px; }
+.scene__titres { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.scene__titre { margin: 0; font-size: 13px; font-weight: 700; line-height: 1.2; }
+
+/* Le diorama prend toute la largeur de l'écran et la hauteur restante. */
+.scene__diorama {
+  /* Hauteur de la maquette (420 px pour 390 de large), réduite si l'écran est court. */
+  flex: 0 1 auto;
+  height: min(107.7vw, 463px);
+  min-height: 180px;
+  margin: 10px -16px 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.scene__diorama .diorama-svg { max-height: 100%; }
+
+.scene__carte { flex: none; }
+
+.scene__choix {
+  flex: none;
+  margin-top: clamp(16px, 4dvh, 33px);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.scene__choix-secondaires { display: flex; gap: 10px; }

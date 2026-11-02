@@ -30,7 +30,9 @@ Ce fichier décrit ce qui ne change pas d'une session à l'autre. Relis-le avant
 ## Règles non négociables
 
 1. **Jamais de fils ni de ficelles dessinés à l'écran.**
-2. **La lisibilité d'abord** : peu de niveaux de lecture par écran, textes d'au moins 15 px, boutons d'au moins 50 px de haut, actions dans le tiers bas de l'écran.
+2. **La lisibilité d'abord** : peu de niveaux de lecture par écran, boutons d'au moins 50 px de haut, actions dans le tiers bas de l'écran. Tailles de texte :
+   - **15 px minimum pour les textes à lire** : répliques, explications, boutons ;
+   - **12 px minimum pour les textes d'appoint** : étiquettes, rôles, signature, titres de scène, didascalies — avec un contraste vérifié (au moins 4,5:1).
 3. **Aucune phrase du livre** : tous les textes sont originaux.
 4. **Le contenu est séparé du code** : scènes, répliques, manœuvres et décors vivent dans des fichiers JSON que je peux modifier moi-même sans toucher au code.
 5. **Tout le dessin est en SVG généré par le code**, sans images externes.
@@ -40,7 +42,7 @@ Ce fichier décrit ce qui ne change pas d'une session à l'autre. Relis-le avant
 
 - Application web statique et installable (PWA), sans serveur ni compte.
 - Hébergement : mon espace IONOS, dans `brodin.fr/ficelles/`. Le résultat final doit être un dossier de fichiers que je peux téléverser tel quel.
-- Mobile d'abord, en portrait, jouable d'une main.
+- Mobile d'abord, en portrait, jouable d'une main. Sur un écran plus large, l'appli reste centrée, avec une largeur maximale d'environ 430 px.
 - Sauvegarde de la progression dans le stockage du navigateur.
 - Un **module de projection isométrique** (x, y, z → position à l'écran) place sols, murs, objets et personnages ; chaque scène est décrite en données et dessinée par ce module.
 - Moteurs réutilisables d'une pièce à l'autre : diorama, scène (dialogues et choix), engagements (bras chargés).

@@ -1,0 +1,45 @@
+{
+  "scene": "petition-boulangerie",
+  "titre": "Scène 1 · La pétition",
+  "decor": "boulangerie",
+
+  "progression": { "etapes": 6, "faites": 2 },
+
+  "mise_en_scene": {
+    "description": "Diorama isométrique d'un coin de rue : la façade d'une boulangerie avec son store rayé et sa vitrine, une affiche « Sauvons le parc » sur le mur voisin. Sur le trottoir, Irène, veste moutarde, tend un stylo à Madame O., manteau vert d'eau, à côté de son stand de pétition.",
+    "objets": [
+      {
+        "id": "stand", "type": "boite", "x": 160, "y": 40, "longueur": 40, "profondeur": 30, "hauteur": 40,
+        "couleur": "#F26B5B", "couleurDessus": "#F7A296", "couleurOmbre": "#D9564A",
+        "dessus": [
+          { "x": 2, "y": 10, "longueur": 18, "profondeur": 10 },
+          { "x": 18, "y": 14, "longueur": 16, "profondeur": 8, "opacite": 0.85 }
+        ],
+        "panneau": { "x": 33, "y": 11, "poteau": 36, "largeur": 27.7, "hauteur": 16, "lignes": "#7FB07A" }
+      }
+    ],
+    "personnages": [
+      { "id": "madame-o", "x": 84.8, "y": 155.2, "sens": "droite" },
+      { "id": "irene", "x": 150.6, "y": 89.4, "sens": "gauche" }
+    ]
+  },
+
+  "repliques": [
+    {
+      "personnage": "irene",
+      "replique": "Vous avez une seconde ? Juste une signature pour le parc.",
+      "didascalie": "Elle tend le stylo et pose la main sur votre bras.",
+      "indices": ["« Juste une signature »", "La main sur le bras"],
+      "technique": "pied-dans-la-porte",
+      "etape": "acte-preparatoire",
+      "engagement": { "libre": true, "public": true, "explicite": true, "couteux": false },
+      "objet": "signature",
+      "choix": [
+        { "texte": "Bien sûr", "effet": "accepte" },
+        { "texte": "Non merci", "effet": "refuse" },
+        { "texte": "Je vois la manœuvre", "effet": "denoncer" }
+      ],
+      "replique_conseil": "Je signe volontiers, mais je ne ferai rien de plus."
+    }
+  ]
+}
